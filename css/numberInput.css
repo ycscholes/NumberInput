@@ -1,0 +1,52 @@
+.ni-wrapper {
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #D4D4D4;
+    overflow: hidden;
+    vertical-align: middle;
+    line-height: 16px;
+    height: 25px;
+    position: relative;
+    background-color: #ffffff;
+}
+.ni-input {
+    font-size: 12px;
+    border: 0px;
+    margin: 0;
+    padding: 0px 2px 0 10px;
+    vertical-align: baseline;
+    line-height: 16px;
+    height: 25px;
+    position: relative;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.ni-actions {
+    position: absolute;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    vertical-align: top;
+    right: 0;
+}
+.ni-up {
+    background: url(../../../img/src/component/tri-angle-up.png) no-repeat center bottom;
+    width: 26px;
+    height: 11px;
+    position: absolute;
+    cursor: pointer;
+}
+.ni-down {
+    background: url(../../../img/src/component/tri-angle-down.png) no-repeat center top;
+    width: 26px;
+    height: 11px;
+    position: absolute;
+    top: 14px;
+    cursor: pointer;
+}
