@@ -1,4 +1,4 @@
-(function() {
+define(['jquery'], function($) {
     if (!$) {
         console.log('Please load jQuery file');
         return false;
@@ -248,4 +248,4 @@
     };
 
     return NumberInput;
-})();
+});
