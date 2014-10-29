@@ -11,3 +11,6 @@
 
 ##API##
 http://ycscholes.github.io/NumberInput
+
+##Demo##
+http://jsfiddle.net/wqr7kood/
