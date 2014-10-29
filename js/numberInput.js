@@ -7,7 +7,7 @@
     var NumberInput = function(el, configs) {
         this.el = el;
         this.$el = $(el);
-        this.configs = configs;
+        this.configs = configs || {};
 
         this._init();
     };
