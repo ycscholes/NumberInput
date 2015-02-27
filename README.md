@@ -13,4 +13,4 @@
 http://ycscholes.github.io/NumberInput
 
 ##Demo##
-http://jsfiddle.net/wqr7kood/
+http://jsfiddle.net/wqr7kood/1/
