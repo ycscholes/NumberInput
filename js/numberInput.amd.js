@@ -237,11 +237,6 @@ define(['jquery'], function($) {
     };
 
     $.fn.numberInput = function(options) {
-        // return this.each(function() {
-        //     new NumberInput(this, options);
-        // });
-
-        /* Need to use code below to replace */
         return this.each(function(i, el) {
             new NumberInput(el, options);
         });

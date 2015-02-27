@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script type="text/javascript" src="../js/bower_components/jQuery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/numberInput.js"></script>
+        <link rel="stylesheet" href="../css/numberInput.css">
+    </head>
+    
+    <body>
+        <input id="numberinput">
+        <input id="numberinputStep">
+    </body>
+    <script>
+        $('#numberinput').numberInput();
+        $('#numberinputStep').numberInput({decimal: false, min: 0, max: 30, step: 2});
+    </script>
+</html>

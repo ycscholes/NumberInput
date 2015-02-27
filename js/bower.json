@@ -1,0 +1,6 @@
+{
+  "name": "numberInput",
+  "devDependencies": {
+    "jQuery": "~2.1.3"
+  }
+}

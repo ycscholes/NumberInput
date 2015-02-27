@@ -36,14 +36,12 @@ input::-webkit-inner-spin-button {
     right: 0;
 }
 .ni-up {
-    background: url(../../../img/src/component/tri-angle-up.png) no-repeat center bottom;
     width: 26px;
     height: 11px;
     position: absolute;
     cursor: pointer;
 }
 .ni-down {
-    background: url(../../../img/src/component/tri-angle-down.png) no-repeat center top;
     width: 26px;
     height: 11px;
     position: absolute;
