@@ -18,7 +18,7 @@ define(['jquery'], function($) {
             step: 1,
             value: 0,
             negative: true,
-            arrows: true,
+            arrows: false,
             decimal: true,
             callback: function() {}
         },
@@ -85,7 +85,7 @@ define(['jquery'], function($) {
                     delta = self.configs.step,
                     result = Math.round((parseFloat(num)*100 + parseFloat(delta)*100))/100;
 
-                if (self.configs.max != "" && result > self.configs.max) {
+                if (self.configs.max != '' && result > self.configs.max) {
                     return false;
                 }
 
@@ -98,7 +98,7 @@ define(['jquery'], function($) {
                     delta = self.configs.step,
                     result = Math.round((parseFloat(num)*100 - parseFloat(delta)*100))/100;
 
-                if (self.configs.min !== "" && result < self.configs.min) {
+                if (self.configs.min !== '' && result < self.configs.min) {
                     return false;
                 }
 
@@ -122,12 +122,12 @@ define(['jquery'], function($) {
 
         _keypress: function(e) {
             // get decimal character and determine if negatives are allowed
-            var decimal = $.data(this, "decimal");
-            var negative = $.data(this, "negative");
+            var decimal = $.data(this, 'decimal');
+            var negative = $.data(this, 'negative');
             // get the key that was pressed
             var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
             // allow enter/return key (only when in an input box)
-            if (key == 13 && this.nodeName.toLowerCase() == "input") {
+            if (key == 13 && this.nodeName.toLowerCase() == 'input') {
                 return true;
             } else if (key == 13) {
                 return false;
@@ -164,7 +164,7 @@ define(['jquery'], function($) {
                 } else {
                     // for detecting special keys (listed above)
                     // IE does not support 'charCode' and ignores them in keypress anyway
-                    if (typeof e.charCode != "undefined") {
+                    if (typeof e.charCode != 'undefined') {
                         // special keys have 'keyCode' and 'which' the same (e.g. backspace)
                         if (e.keyCode == e.which && e.which != 0) {
                             allow = true;
@@ -199,10 +199,10 @@ define(['jquery'], function($) {
 
         _blur: function()
         {
-            var decimal = $.data(this, "decimal");
-            var callback = $.data(this, "callback");
+            var decimal = $.data(this, 'decimal');
+            var callback = $.data(this, 'callback');
             var val = this.value;
-            if(val != "" && val != '-0')
+            if(val != '' && val != '-0')
             {
                 if (this.max && val > parseFloat(this.max)) {
                     val = this.max;
@@ -213,7 +213,7 @@ define(['jquery'], function($) {
                     this.value = val;
                 }
 
-                var re = new RegExp("^\\d+$|\\d*" + decimal + "\\d+");
+                var re = new RegExp('^\\d+$|\\d*' + decimal + '\\d+');
                 if(!re.exec(val))
                 {
                     callback.apply(this);
